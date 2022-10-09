@@ -7,6 +7,8 @@
  * relevant readings for each task.
  */
 
+import java.util.Arrays;
+
 /**
  *  1. In Java, no code can exist outside of a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
@@ -43,7 +45,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -62,7 +64,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+        int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -99,6 +101,10 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        int sum = 0;
+        for (int i = 10; i >= 0; i--) {
+            System.out.println("Current count: " + i);
+        }
 
 
     }
@@ -107,7 +113,7 @@ public class Basics {
      *  6. Below is a method named split which returns a String,
      *    as indicated by the 'String' part of the header. It takes one
      *    parameter named to_split, whose type is also a String.
-     *
+
      *    This block of code above the method is called the doc comment -- this
      *    is equivalent to docstrings in Python.
      *
@@ -143,6 +149,10 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
+        String[] arrofStr = to_split.split(" ");
+        for (String s : arrofStr) {
+            ret.append(s.charAt(0));
+        }
 
         return ret.toString();
     }
@@ -170,7 +180,13 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-
+        int i = 0;
+        for (int a: arr) {
+            if (i % 2 == 1) {
+                current_sum += a;
+            }
+            i++;
+        }
         return current_sum;
     }
 
